@@ -1,11 +1,5 @@
 [Yapay Zeka Kampı - Python Giriş]
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./src/Images/Project/nodered1.png">
-  <source media="(prefers-color-scheme: light)" srcset="https://drive.google.com/file/d/1fMAAIkjt8tGszKtQL9ZJfvh3nyAzBOtQ/view?usp=sharing">
-  <img alt="" src="https://user-images.githubusercontent.com/25423296/163456779-a8556205-d0a5-45e2-ac17-42d089e3c3f8.png">
-</picture>
-
 
 ``` python
 
