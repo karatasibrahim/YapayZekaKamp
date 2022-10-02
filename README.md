@@ -1,1 +1,1 @@
-# YapayZekaKamp
+# Yapay Zeka Kampı
