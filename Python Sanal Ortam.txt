@@ -1,0 +1,102 @@
+Not: Aşağıda anlatılacaklar Python 3.x versiyonları için geçerlidir. Bunun yanında Python 3.3 ve daha yeni versiyonlarında sanal ortam kurmak için gerekli venv kütüphanesi mevcuttur.
+
+1- Pip Kurulumu
+Python’da sanal ortam oluşturmak için ilk yapacağımız iş pip yüklemek olacaktır. pip, 3.parti python paketlerinin kurulması için kullanılan bir paket yöneticisidir. pip ile ilgili daha fazla bilgi edinmek için buraya tıklayabilirsiniz. pip yüklemek için linkteki belgeyi indirip kurmanız gerekmektedir. Kurmak için ise; Windows için Komut İstemi, Linux için Terminal ekranında indirdiğiniz belgenin konumuna gidip
+
+python get-pip.py
+komutunu çalıştırmalısınız. Pip kurulumunu tamamlamış olduk.
+
+2- Sanal Ortamı Oluşturmak.
+Sanal ortamımızı kurmadan önce bir çalışma klasörü oluşturalım. Bu klasörün içinde girdikten sonra
+
+Windows için:
+
+python -m venv env
+Linux için:
+
+python3 -m venv env
+komutunu çalıştıralım. Burada env argümanı, sanal ortamımızın adını belirtmektedir. Sanal ortamımıza istediğimiz adı verebiliriz.
+
+3- Sanal Ortama Girmek
+Sanal ortamımıza paket yüklemeden önce aktifleştirmemiz gerekiyor. Aktifleştirmek için
+
+Windows için:
+
+.\env\Scripts\activate
+Linux için:
+
+source env/bin/activate
+kodunu yazmalıyız. Eğer komut istemi ekranınızda
+
+(env) C:Users\kullanıcı\Desktop\test
+yada terminal ekranınızda
+
+(env) work-pc:test user$
+şeklinde (env) yazıyorsa, sanal ortamınızın içindesiniz demektir.
+
+4- Sanal Ortamdan Çıkmak
+Başka bir projeye geçmek yada sanal ortamdan çıkmak için
+
+deactivate
+komutunu yazmanız yeterlidir. Tekrar sanal ortama giriş yapmak için sanal ortam aktifleştirme kodunu yazmanız gerekmektedir.
+
+5- Paket Yükleme
+Örneğin, sanal ortamımıza pandas kütüphanesini yükleyeceğiz. Bunun için sanal ortamımız içinde
+
+pip install pandas
+yazmalıyız. Eğer yüklemek istediğimiz paketin belli bir versiyonunu yüklemek istiyorsak
+
+pip install pandas==0.25.0
+yazmalıyız. Eğer zip, wheel ya da tar dosyası ile yükleme yapmak istiyorsak
+
+pip install pandas-0.25.0.tar.gz
+yazmamız yeterli. Eğer tek tek paket yüklemekten sıkılıp paketleri toplu şekilde yüklemek istiyorsak requirement.txt adında bir not belgesi açıp içine yüklemek istediğimiz belgeleri yazmalıyız. Örnek olarak, veri bilimi projelerinde genel olarak kullanılan paketleri yazalım.
+
+pandas
+numpy
+sklearn
+matplotlib
+seaborn
+scipy
+Bu belgeyi oluşturduktan sonra komut istemi içerisinde
+
+pip install -r requirements.txt
+komutunu çalıştırmalıyız.
+
+6- Paket Güncelleme
+Eğer yüklü olan bir paketi güncellemek istiyorsak
+
+pip install --upgrade pandas
+komutunu kullanmalıyız.
+
+7- Paket Kaldırma
+Eğer varolan bir paketi kaldırmak istiyorsak
+
+pip uninstall pandas
+komutunu kullanmalıyız.
+
+8- Paketleri Listelemek
+Eğer varolan paketleri listelemek istiyorsak
+
+pip list
+komutunu kullanmak yeterlidir. Ancak yeni versiyonları çıkmış olabilecek paketleri listelemek istiyorsak
+
+pip list --outdated
+komutunu kullanmalıyız. Bir paket hakkında detaylı bilgi almak için ise
+
+pip show pandas
+komutunu kullanmalıyız. Pip üzerinde belirli bir paketi aramak istiyorsak
+
+pip search "pandas"
+komutunu kullanmalıyız.
+
+Eveeeet, en genel anlamda sanal ortam kurmayı öğrenmiş olduk. Son olarak, Anaconda içinde veri bilimi projeleri geliştirmek için kolaylık sağlayan Jupyter Notebook ve Jupyter Lab programlarını yüklemek isteyebilirsiniz. Bunun içinde
+
+pip install jupyterlab
+komutunu çalıştırmanız gereklidir. Bu programları çalıştırmak içinse
+
+jupyter lab
+veya
+
+jupyter notebook
+komutunu yazmanız yeterlidir.
